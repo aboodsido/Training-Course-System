@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.RoomOperationsTableViewPaneController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="516.0" prefWidth="872.0" spacing="10.0" style="-fx-background-color: E1ECF9;">
+            <children>
+            <Label alignment="CENTER" prefHeight="47.0" prefWidth="521.0" text="Room Operations Page">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+                <HBox alignment="CENTER" prefHeight="372.0" prefWidth="931.0" spacing="15.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="382.0" prefWidth="301.0" spacing="12.0" style="-fx-background-color: E1ECF9;">
+                            <padding>
+                                <Insets left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                            <children>
+                                <GridPane hgap="5.0" maxHeight="-Infinity" prefHeight="142.0" prefWidth="281.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="53.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="166.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="room_id_label" text="Room ID">
+                                            <font>
+                                                <Font name="Microsoft YaHei UI" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="room_id_field" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </GridPane>
+                                <Separator prefWidth="200.0" />
+                                <TextArea fx:id="textArea" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Here, will appear the result of the verification of the five operations: Show, Add, Edit, Delete, and Refresh ..." wrapText="true">
+                                    <font>
+                                        <Font name="Microsoft YaHei UI" size="11.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="DEFAULT" />
+                                    </cursor>
+                                </TextArea>
+                            </children>
+                        </VBox>
+                        <TableView fx:id="room_tableView" maxWidth="-Infinity" prefHeight="319.0" prefWidth="200.0" style="-fx-font-size: 14px;">
+                            <columns>
+                                <TableColumn fx:id="room_id_column" prefWidth="200.0" resizable="false" style="-fx-font-family: Microsoft YaHei UI;" text="ID" />
+                            </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                        </TableView>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="91.0" prefWidth="931.0" spacing="10.0" stylesheets="@Style.css">
+                    <children>
+                        <Button fx:id="room_show_button" mnemonicParsing="false" onAction="#room_show_action" prefHeight="30.0" prefWidth="90.0" text="Show" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="room_add_button" mnemonicParsing="false" onAction="#room_add_action" prefHeight="30.0" prefWidth="90.0" text="Add" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="room_edit_button" mnemonicParsing="false" onAction="#room_edit_action" prefHeight="30.0" prefWidth="90.0" text="Edit" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="room_delete_button" mnemonicParsing="false" onAction="#room_delete_acton" prefHeight="30.0" prefWidth="90.0" text="Delete" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="room_reset_button" mnemonicParsing="false" onAction="#room_reset_action" prefHeight="30.0" prefWidth="90.0" text="Reset" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="0.0" prefWidth="931.0">
+                    <children>
+                        <Button fx:id="btnBackToMain" mnemonicParsing="false" onAction="#btnBackToMainHandle" prefHeight="30.0" prefWidth="194.0" stylesheets="@Style.css" text="Back to main page" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</FlowPane>

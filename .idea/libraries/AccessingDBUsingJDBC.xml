@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AccessingDBUsingJDBC">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/AccessingDBUsingJDBC.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-05-31T01:11:35</date>
+  <millis>1653948695522</millis>
+  <sequence>0</sequence>
+  <logger>log_file</logger>
+  <level>INFO</level>
+  <class>login.LoginPagePaneController</class>
+  <method>initialize</method>
+  <thread>13</thread>
+  <message>System is Opened - Login Page appears</message>
+</record>
+<record>
+  <date>2022-05-31T01:11:45</date>
+  <millis>1653948705823</millis>
+  <sequence>1</sequence>
+  <logger>log_file</logger>
+  <level>INFO</level>
+  <class>login.LoginPagePaneController</class>
+  <method>login_action</method>
+  <thread>13</thread>
+  <message>Some one tried to login the system with username: hamada</message>
+</record>
+<record>
+  <date>2022-05-31T01:11:45</date>
+  <millis>1653948705946</millis>
+  <sequence>3</sequence>
+  <logger>log_file</logger>
+  <level>INFO</level>
+  <class>Admin.AdminMainPageController</class>
+  <method>openPage</method>
+  <thread>13</thread>
+  <message>hamada is logged in</message>
+</record>
+<record>
+  <date>2022-05-31T01:11:45</date>
+  <millis>1653948705957</millis>
+  <sequence>4</sequence>
+  <logger>log_file</logger>
+  <level>INFO</level>
+  <class>login.LoginPagePaneController</class>
+  <method>login_action</method>
+  <thread>13</thread>
+  <message>hamadais logged in as Admin</message>
+</record>
+<record>
+  <date>2022-05-31T01:11:46</date>
+  <millis>1653948706997</millis>
+  <sequence>6</sequence>
+  <logger>log_file</logger>
+  <level>INFO</level>
+  <class>Admin.AdminMainPageController</class>
+  <method>room_operations_action</method>
+  <thread>13</thread>
+  <message>Admin Clicked on Room Operation button</message>
+</record>
+<record>
+  <date>2022-05-31T01:11:46</date>
+  <millis>1653948706998</millis>
+  <sequence>7</sequence>
+  <logger>log_file</logger>
+  <level>INFO</level>
+  <class>Admin.AdminMainPageController</class>
+  <method>room_operations_action</method>
+  <thread>13</thread>
+  <message>Showing Room Operations Page to the Admin</message>
+</record>
+<record>
+  <date>2022-05-31T01:11:49</date>
+  <millis>1653948709124</millis>
+  <sequence>9</sequence>
+  <logger>log_file</logger>
+  <level>INFO</level>
+  <class>Admin.RoomOperationsTableViewPaneController</class>
+  <method>btnBackToMainHandle</method>
+  <thread>13</thread>
+  <message>Back to Admin Main Page</message>
+</record>
+<record>
+  <date>2022-05-31T01:11:50</date>
+  <millis>1653948710924</millis>
+  <sequence>11</sequence>
+  <logger>log_file</logger>
+  <level>INFO</level>
+  <class>Admin.AdminMainPageController</class>
+  <method>student_operations_action</method>
+  <thread>13</thread>
+  <message>Admin Clicked on Student Operation button</message>
+</record>
+<record>
+  <date>2022-05-31T01:11:50</date>
+  <millis>1653948710925</millis>
+  <sequence>12</sequence>
+  <logger>log_file</logger>
+  <level>INFO</level>
+  <class>Admin.AdminMainPageController</class>
+  <method>student_operations_action</method>
+  <thread>13</thread>
+  <message>Showing Student Operations Page to the Admin</message>
+</record>
+<record>
+  <date>2022-05-31T01:11:53</date>
+  <millis>1653948713365</millis>
+  <sequence>13</sequence>
+  <logger>log_file</logger>
+  <level>INFO</level>
+  <class>Admin.StudentOperationsTableViewPaneController</class>
+  <method>show_action</method>
+  <thread>13</thread>
+  <message>Admin Shows all Students</message>
+</record>
+</log>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.CourseOperationsTableViewPaneController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="516.0" prefWidth="872.0" spacing="10.0" style="-fx-background-color: E1ECF9;">
+            <children>
+            <Label alignment="CENTER" prefHeight="47.0" prefWidth="521.0" text="Course Operations Page">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+                <HBox alignment="CENTER" prefHeight="372.0" prefWidth="931.0" spacing="15.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="382.0" prefWidth="301.0" spacing="12.0" style="-fx-background-color: E1ECF9;">
+                            <padding>
+                                <Insets left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                            <children>
+                                <GridPane hgap="5.0" maxHeight="-Infinity" prefHeight="293.0" prefWidth="281.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="99.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="177.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="123.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="course_id_label" text="Course id">
+                                            <font>
+                                                <Font name="Microsoft YaHei UI" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="course_id_field" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </TextField>
+                              <Label fx:id="course_description_label" text="Description" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Microsoft YaHei UI" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="course_description_area" prefHeight="113.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets top="10.0" />
+                                 </GridPane.margin></TextArea>
+                              <Label fx:id="room_id_label" text="Room id" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Microsoft YaHei UI" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lecture_time_label" text="Lecture time" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Microsoft YaHei UI" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="room_id_comboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="lecture_time_field" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label fx:id="course_name_label" text="Course name" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Microsoft YaHei UI" size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="course_name_field" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets top="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                                    </children>
+                                </GridPane>
+                                <Separator prefWidth="200.0" />
+                            </children>
+                        </VBox>
+                        <TableView fx:id="course_tableView" maxWidth="-Infinity" prefHeight="319.0" prefWidth="507.0" style="-fx-font-size: 14px;">
+                            <columns>
+                                <TableColumn fx:id="course_id_column" minWidth="0.0" prefWidth="94.0" resizable="false" style="-fx-font-family: Microsoft YaHei UI;" text="ID" />
+                        <TableColumn fx:id="course_name_column" prefWidth="130.0" resizable="false" style="-fx-font-family: Microsoft YaHei UI;" text="Name" />
+                                <TableColumn fx:id="course_description_column" prefWidth="116.0" resizable="false" style="-fx-font-family: Microsoft YaHei UI;" text="Descrtiption" />
+                        <TableColumn fx:id="room_id_column" prefWidth="72.0" text="Room id" />
+                        <TableColumn fx:id="lec_time_column" prefWidth="94.0" text="Lecture time" />
+                            </columns>
+                        </TableView>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="91.0" prefWidth="931.0" spacing="10.0" stylesheets="@Style.css">
+                    <children>
+                        <Button fx:id="btnShow" mnemonicParsing="false" onAction="#show_action" prefHeight="30.0" prefWidth="90.0" text="Show" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#add_action" prefHeight="30.0" prefWidth="90.0" text="Add" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#edit_action" prefHeight="30.0" prefWidth="90.0" text="Edit" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#delete_action" prefHeight="30.0" prefWidth="90.0" text="Delete" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnReset" mnemonicParsing="false" onAction="#reset_action" prefHeight="30.0" prefWidth="90.0" text="Reset" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="0.0" prefWidth="931.0">
+                    <children>
+                        <Button fx:id="btnBackToMain" mnemonicParsing="false" onAction="#btnBackToMainHandle" prefHeight="30.0" prefWidth="194.0" stylesheets="@Style.css" text="Back to main page" textFill="WHITE">
+                            <font>
+                                <Font name="Microsoft YaHei UI" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</FlowPane>

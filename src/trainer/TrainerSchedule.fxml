@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trainer.TrainerScheduleController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="516.0" prefWidth="872.0" spacing="10.0" style="-fx-background-color: E1ECF9;">
+         <children>
+            <HBox fx:id="label_schedule" alignment="CENTER" fillHeight="false" prefHeight="29.0" prefWidth="725.0" style="-fx-background-color: #55ACEE; -fx-background-radius: 10px;">
+               <children>
+                  <Label fx:id="label_delete_course" alignment="CENTER" prefHeight="17.0" prefWidth="465.0" text="Schedule" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="150.0" right="150.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="tabelView_schedule" alignment="CENTER" prefHeight="372.0" prefWidth="931.0" spacing="15.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <children>
+                  <TableView fx:id="registered_courses_tableView" maxWidth="-Infinity" prefHeight="344.0" prefWidth="496.0" style="-fx-font-size: 14px;">
+                     <columns>
+                        <TableColumn fx:id="course_id_column" prefWidth="97.0" resizable="false" style="-fx-font-family: Microsoft YaHei UI;" text="Course ID" />
+                        <TableColumn fx:id="course_name_column" prefWidth="122.0" text="Course name" />
+                        <TableColumn fx:id="course_room_column" prefWidth="118.0" resizable="false" style="-fx-font-family: Microsoft YaHei UI;" text="Room" />
+                        <TableColumn fx:id="course_time_column" prefWidth="158.0" text="Time" />
+                     </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Button fx:id="show_all_btn" alignment="CENTER" mnemonicParsing="false" onAction="#show_all_action" prefHeight="29.0" prefWidth="108.0" stylesheets="@Style.css" text="Show all" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft YaHei UI" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backToMainbtn" alignment="CENTER" mnemonicParsing="false" onAction="#btnBackToMainHandle" prefHeight="29.0" prefWidth="156.0" stylesheets="@Style.css" text="Back to main page" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft YaHei UI" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</FlowPane>

@@ -1,0 +1,23 @@
+.button {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#55acee, #09395d);
+}
+
+.button:hover {
+    -fx-text-fill: black;
+    -fx-background-color: linear-gradient(#f1f3f4, #66757f);
+}
+
+
+#log_out {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#4EC1EF, #499FC1);
+    -fx-border-radius: 3px;
+    -fx-border-color: #133863;
+}
+
+
+#log_out:hover {
+    -fx-text-fill: black;
+    -fx-background-color: linear-gradient(#f1f3f4, #66757f);
+}
