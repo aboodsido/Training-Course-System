@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 3, 2021, 3:22:42 AM
+    Author     : MT
+*/
+.button {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#55acee, #09395d);
+}
+
+.button:hover {
+    -fx-text-fill: black;
+    -fx-background-color: linear-gradient(#f1f3f4, #66757f);
+}
+
+#log_out_btn {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#4EC1EF, #499FC1);
+    -fx-border-radius: 3px;
+    -fx-border-color: #133863;
+}
+
+
+#log_out_btn:hover {
+    -fx-text-fill: black;
+    -fx-background-color: linear-gradient(#f1f3f4, #66757f);
+}

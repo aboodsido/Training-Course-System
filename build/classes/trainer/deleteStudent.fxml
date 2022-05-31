@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="638.0" style="-fx-background-color: #D7E5F0;" stylesheets="/trainer/Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trainer.deleteStudentController">
+    <children>
+        <HBox layoutX="125.0" layoutY="34.0" prefHeight="47.0" prefWidth="351.0">
+            <children>
+                <Label fx:id="deletingStudent_lable" alignment="CENTER" prefHeight="47.0" prefWidth="354.0" style="-fx-background-color: #019CE0; -fx-background-radius: 12;" text="Deleting Student" textFill="WHITE">
+                    <font>
+                        <Font name="Impact" size="28.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="114.0" layoutY="110.0" prefHeight="63.0" prefWidth="373.0" spacing="10.0">
+            <children>
+                <TextField fx:id="search_textField" prefHeight="43.0" prefWidth="209.0" promptText="Search for a Student">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </TextField>
+                <VBox alignment="CENTER" prefHeight="60.0" prefWidth="113.0" spacing="10.0">
+                    <children>
+                        <Button fx:id="search_button" mnemonicParsing="false" onAction="#search_button_action" prefHeight="25.0" prefWidth="114.0" text="Search">
+                            <font>
+                                <Font name="Microsoft YaHei" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="showStudents_button" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#showStudents_action" prefHeight="25.0" prefWidth="122.0" text="Show All Students" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <VBox alignment="TOP_CENTER" layoutX="42.0" layoutY="195.0" prefHeight="231.0" prefWidth="552.0">
+            <children>
+                <TableView fx:id="tableView" prefHeight="234.0" prefWidth="552.0" style="-fx-background-color: #F2F3F4;">
+                    <columns>
+                        <TableColumn fx:id="student_user_column" prefWidth="126.0" text="Student user" />
+                        <TableColumn fx:id="course_id_column" prefWidth="125.0" text="Course id" />
+                  <TableColumn fx:id="room_id_column" prefWidth="88.0" text="Room id" />
+                  <TableColumn fx:id="time_column" prefWidth="212.0" text="Time" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+        <Button fx:id="delete_button" layoutX="79.0" layoutY="458.0" mnemonicParsing="false" onAction="#delete_button_action" prefHeight="35.0" prefWidth="96.0" text="DELETE">
+            <font>
+                <Font name="Microsoft YaHei" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="backToMainbtn" layoutX="431.0" layoutY="458.0" mnemonicParsing="false" onAction="#btnBackToMainHandle" prefHeight="35.0" prefWidth="144.0" text="Back to Main Page">
+            <font>
+                <Font name="Microsoft YaHei" size="13.0" />
+            </font>
+        </Button>
+    </children>
+</Pane>
